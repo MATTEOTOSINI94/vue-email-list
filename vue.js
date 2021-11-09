@@ -22,7 +22,7 @@ const app = new Vue ({
         
                     let rispostaServer = element.data
     
-                    this.userMail = rispostaServer.response;
+                    this.userMail.push(rispostaServer.response);
                     console.log(this.userMail)
 
                 })
