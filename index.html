@@ -10,11 +10,19 @@
 <body>
     <div id="root">
     <main>
-        <ul>
-            <li>{{userMail}}</li>
-            <button @click=" generateMailServer()"></button>
-        </ul>
 
+        <!-- metodo con i v-if -->
+        <ul v-if="userMail.length === pendigList ">
+            <li v-for="mail in userMail" >{{mail}}</li>
+           
+        </ul>
+        <button  @click=" generateMailServer()">Crea lista</button>
+
+
+        <ul v-for="email in userMail">
+            <li>{{email}}</li>
+        </ul>
+        <button  @click=" generatMail()">Crea lista</button>
     </main>
     </div>
 
